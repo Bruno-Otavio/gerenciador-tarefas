@@ -1,0 +1,33 @@
+INSERT INTO Usuarios(nome, email, senha) VALUES
+("Takamasa Nomuro", "takamsa@email.com", "takamasanomuro123"),
+("Shingaru Miyamoto", "miyamoto@email.com", "shingarumiyamoto123"),
+("Tanaka Traka", "traka@email.com", "tanakatraka123"),
+("Takuku Nakara", "takuku@email.com", "takukunakara123"),
+("Masaro Miyamoto", "masaro@email.com", "masaromiyamoto123"),
+("Takafuro Nokoko", "nokoko@email.com", "takafuronokoko123"),
+("Hideo Ohabo", "ohabo@email.com", "hideoohabo123"),
+("Kanota Nakama", "nakama@email.com", "kanotanakama123"),
+("Fugyu Kutroco", "fugyu@email.com", "fugyukutroco123"),
+("Kutuka Kawara", "kawara@email.com", "kutukakawara123");
+
+INSERT INTO Tarefas(descricao, data_vencimento, status_tarefa, id_usuario) VALUES
+("Terminar o reboco da casa", date_sub(now(), interval 200 hour), "Finalizada", 1),
+("Terminar o banheiro da casa", date_sub(now(), interval 250 hour), "Em andamento", 1),
+("Levar a moto para o mecânico", date_sub(now(), interval 100 hour), "Finalizada", 2),
+("Lavar a moto", date_sub(now(), interval 120 hour), "Finalizada", 2),
+("Pegar o ônibus de manhã", date_sub(now(), interval 175 hour), "Em andamento", 3),
+("Ir trabalhar no sábado", date_sub(now(), interval 185 hour), "Em andamento", 3),
+("Fazer uma cirurgia plástica", date_sub(now(), interval 285 hour), "Em andamento", 4),
+("Ir no psicólogo", date_sub(now(), interval 85 hour), "Em andamento", 4),
+("Levar a moto no martelinho de ouro", date_sub(now(), interval 95 hour), "Em andamento", 5),
+("Tunar minha moto", date_sub(now(), interval 195 hour), "Em andamento", 5),
+("Abrir minha barraca na praia", date_sub(now(), interval 115 hour), "Finalizada", 6),
+("Vender coco na minha barraca", date_sub(now(), interval 125 hour), "Finalizada", 6),
+("Ficar parado na esquina", date_sub(now(), interval 165 hour), "Em andamento", 7),
+("Rodar bolsinha", date_sub(now(), interval 135 hour), "Finalizada", 7),
+("Ir trabalhar deitado no sábado", date_sub(now(), interval 235 hour), "Finalizada", 8),
+("Passar na farmácia", date_sub(now(), interval 245 hour), "Em andamento", 8),
+("Ir na padaria", date_sub(now(), interval 145 hour), "Finalizada", 9),
+("Lavar meu dinheiro", date_sub(now(), interval 147 hour), "Finalizada", 9),
+("Cutucar onça com vara curta", date_sub(now(), interval 177 hour), "Em andamento", 10),
+("Ir pro hospital", date_sub(now(), interval 179 hour), "Em andamento", 10);
