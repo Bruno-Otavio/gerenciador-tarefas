@@ -1,0 +1,6 @@
+.login-shadow {
+  box-shadow: #dde4e5 1px 1px, #ccdbdc 2px 2px, #bbd1d3 3px 3px, #a9c8c9 4px 4px, #98bec0 5px 5px, #87b5b7 6px 6px, #76abae 7px 7px, #EEEEEE 0px 0px;
+  backdrop-filter: blur(10px);
+}
+
+/*# sourceMappingURL=main.css.map */

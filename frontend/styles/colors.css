@@ -1,0 +1,42 @@
+:root {
+    --dark-gray: #222831;
+    --gray: #31363F;
+    --teal: #76ABAE;
+    --white: #EEEEEE;
+}
+
+.bg-dark-gray {
+    background-color: var(--dark-gray); 
+}
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+.bg-teal {
+    background-color: var(--teal);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.c-dark-gray {
+    color: var(--dark-gray);
+}
+
+.c-gray {
+    color: var(--gray);
+}
+
+.c-teal {
+    color: var(--teal);
+}
+
+.c-white {
+    color: var(--white);
+}
+
+.nav-link {
+    color: var(--white);
+}
