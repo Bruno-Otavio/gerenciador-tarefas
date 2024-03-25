@@ -33,14 +33,14 @@
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTarefa">
                 Adicionar
             </button>
-            <div class="modal fade" id="addTarefa" tabindex="-1" aria-labelledby="addTarefaLabel" aria-hidden="true">
+            <div class="modal fade" id="addTarefa" data-bs-theme="dark" tabindex="-1" aria-labelledby="addTarefaLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content bg-dark-gray">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="addTarefaLabel">Modal title</h1>
+                    <div class="modal-content">
+                        <div class="modal-header c-white">
+                            <h1 class="modal-title fs-5" id="addTarefaLabel">Adicionar Tarefa</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body c-white">
                             <form>
                                 <div class="mb-3">
                                     <label for="tituloTarefa" class="form-label">Titulo</label>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="descricaoTarefa" class="form-label">Descrição</label>
-                                    <textarea name="descricaoTarefa" id="descricaoTarefa" class="form-control"></textarea>
+                                    <textarea name="descricaoTarefa" id="descricaoTarefa" class="form-control bg-dark-gray"></textarea>
                                 </div>
                                 <div>
                                     <label for="dateTarefa" class="form-label">Data de Vencimento</label>
@@ -56,9 +56,9 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer c-white">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Adicionar Tarefa</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Adicionar Tarefa</button>
                         </div>
                     </div>
                 </div>

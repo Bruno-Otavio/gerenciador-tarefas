@@ -11,28 +11,29 @@
 <body class="bg-gray">
     <main class="container d-flex justify-content-center align-items-center vh-100">
         <div class="container bg-dark-gray rounded-3 w-25 p-5 c-white login-shadow">
-            <form id="loginForm">
+            <form id="cadastro">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" required>
+                </div>
                 <div class="mb-3">
                     <label for="email" class="col-form-label">Email:</label>
-                    <input type="email" name="email" class="form-control" id="email" required>
+                    <input type="text" class="form-control" id="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="col-form-label">Senha:</label>
                     <input type="password" name="senha" class="form-control" id="senha" required>
                 </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-success">Login</button>
-                    <button type="reset" class="btn btn-secondary">Limpar</button>
-                </div>
                 <div class="mt-4">
-                    <span class="c-teal">Sem cadastro? <a href="./cadastro.html" class="c-white" style="text-decoration: none;">Clique aqui</a> e faça já o seu!</span>
+                    <button type="submit" class="btn btn-success" id="submit-btn">Cadastrar</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
                 </div>
             </form>           
         </div>
     </main>
 </body>
-<script src="../js/login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="../js/cadastro.js"></script>
 </html>
