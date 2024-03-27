@@ -1,3 +1,4 @@
+const connect = require("../../connect/connect");
 const CRUD = require("../CRUD");
 
 const table = "usuarios"
@@ -14,10 +15,20 @@ const queries = (data={}) => {
 class User extends CRUD {
     constructor(queries) {
         super(queries);
+        this.queries = queries;
     }
 
     login = (req, res) => {
-        return;
+        const data = { ...req.body };
+        connect.query(this.queries().getAll, (err, result) => {
+            const users = result;
+            users.forEach((user) => {
+                if (data.email === user.email && data.senha === user.senha) {
+                    console.log("logged");
+                    res.status(202).json({ id: user.id, logged: true }).end();
+                }
+            });
+        });
     }
 }
 
