@@ -10,8 +10,8 @@ let user = {
 
 const login = (form) => {
     const data = {
-        email: form.email.value,
-        senha: form.senha.value,
+        email: form.email.value.toLowerCase(),
+        senha: form.senha.value.toLowerCase(),
     };
 
     const request = new Request(login_url, {
@@ -22,9 +22,7 @@ const login = (form) => {
         }),
     });
 
-    fetch(request)
-        .then((res) => res.json())
-        .then((res) => user = { ...res });
+    fetch(request);
     
     form.senha.value = "";
 }
@@ -33,3 +31,5 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     login(form)
 });
+
+export default user;

@@ -1,14 +1,14 @@
 INSERT INTO Usuarios(nome, email, senha) VALUES
-("Takamasa Nomuro", "takamsa@email.com", "takamasanomuro123"),
-("Shingaru Miyamoto", "miyamoto@email.com", "shingarumiyamoto123"),
-("Tanaka Traka", "traka@email.com", "tanakatraka123"),
-("Takuku Nakara", "takuku@email.com", "takukunakara123"),
-("Masaro Miyamoto", "masaro@email.com", "masaromiyamoto123"),
-("Takafuro Nokoko", "nokoko@email.com", "takafuronokoko123"),
-("Hideo Ohabo", "ohabo@email.com", "hideoohabo123"),
-("Kanota Nakama", "nakama@email.com", "kanotanakama123"),
-("Fugyu Kutroco", "fugyu@email.com", "fugyukutroco123"),
-("Kutuka Kawara", "kawara@email.com", "kutukakawara123");
+("Takamasa Nomuro", "takamsa@email.com", md5("takamasanomuro123")),
+("Shingaru Miyamoto", "miyamoto@email.com", md5("shingarumiyamoto123")),
+("Tanaka Traka", "traka@email.com", md5("tanakatraka123")),
+("Takuku Nakara", "takuku@email.com", md5("takukunakara123")),
+("Masaro Miyamoto", "masaro@email.com", md5("masaromiyamoto123")),
+("Takafuro Nokoko", "nokoko@email.com", md5("takafuronokoko123")),
+("Hideo Ohabo", "ohabo@email.com", md5("hideoohabo123")),
+("Kanota Nakama", "nakama@email.com", md5("kanotanakama123")),
+("Fugyu Kutroco", "fugyu@email.com", md5("fugyukutroco123")),
+("Kutuka Kawara", "kawara@email.com", md5("kutukakawara123"));
 
 INSERT INTO Tarefas(descricao, data_vencimento, status_tarefa, id_usuario) VALUES
 ("Terminar o reboco da casa", date_sub(now(), interval 200 hour), "Finalizada", 1),
