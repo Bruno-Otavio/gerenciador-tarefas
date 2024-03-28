@@ -36,8 +36,8 @@ class User extends CRUD {
                     req.session.loggedIn = true;
                     req.session.email = data.email;
 
-                    console.log("correct");
-                    res.status(202).json(result).end();
+                    console.log("correct", req.session);
+                    res.status(202).json(req.session).end();
                 } else {
                     console.log("incorrect");
                     res.send("Incorrect Email and/or Password");

@@ -4,8 +4,8 @@ const login_url = "http://localhost:3000/users/login";
 const tarefas_url = "http://127.0.0.1:5500/frontend/pages/tarefas.html";
 
 let user = {
-    id: 0,
-    logged: false
+    email: 0,
+    loggedIn: false
 };
 
 const login = (form) => {
@@ -22,7 +22,18 @@ const login = (form) => {
         }),
     });
 
-    fetch(request);
+    fetch(request)
+        .then(res => res.json())
+        .then(res => {
+            user.email = res.session.email;
+            user.loggedIn = res.session.loggedIn;
+
+            if (res.loggedIn) {
+                window.location.replace(tarefas_url);
+            } else {
+                console.log("Email ou Senha incorretos!");
+            }
+        });
     
     form.senha.value = "";
 }
