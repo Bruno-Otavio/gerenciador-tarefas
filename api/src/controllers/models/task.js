@@ -1,6 +1,6 @@
 const CRUD = require("../CRUD");
 
-const table = "tarefas"
+const table = "Tarefas"
 
 const queries = (data={}) => {
     return {

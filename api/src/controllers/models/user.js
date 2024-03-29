@@ -3,7 +3,7 @@ const CRUD = require("../CRUD");
 
 const tarefas_url = "http://127.0.0.1:5500/frontend/pages/tarefas.html";
 
-const table = "usuarios"
+const table = "Usuarios"
 
 const queries = (data={}) => {
     return {
@@ -29,25 +29,20 @@ class User extends CRUD {
             connect.query(this.queries(data).login, (err, result) => {
                 if (err) res.status(400).json(err).end();
 
-                console.log(result);
-
                 const users = result;
                 if (users.length > 0) {
                     req.session.loggedIn = true;
                     req.session.email = data.email;
 
-                    console.log("correct", req.session);
                     res.status(202).json(req.session).end();
                 } else {
-                    console.log("incorrect");
-                    res.send("Incorrect Email and/or Password");
+                    res.status(404).json(result).end();
                 }
 
                 res.end();
             });
         } else {
             res.send("Please send Username or Password");
-            res.end();
         }
     }
 }

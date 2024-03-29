@@ -14,6 +14,9 @@ router.get("/users", users.getAll);
 router.get("/users/:id", users.get);
 router.post("/users", users.create);
 router.post("/users/login", users.login);
+router.get("/user/session", (req, res) => {
+    res.status(202).json(req.session).end();
+});
 
 router.get("/tasks", tasks.getAll);
 router.get("/tasks/:id", tasks.get);

@@ -15,7 +15,7 @@ class CRUD {
     get = (req, res) => {
         const data = { ...req.params };
         connect.query(this.queries(data).get, (err, result) => {
-            if (err) res.stataus(404).json(err).end();
+            if (err) res.status(404).json(err).end();
             else res.status(202).json(result[0]).end();
         });
     }

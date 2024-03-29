@@ -1,12 +1,8 @@
 const form = document.querySelector("#loginForm");
+const error = document.querySelector("#error");
 
 const login_url = "http://localhost:3000/users/login";
 const tarefas_url = "http://127.0.0.1:5500/frontend/pages/tarefas.html";
-
-let user = {
-    email: 0,
-    loggedIn: false
-};
 
 const login = (form) => {
     const data = {
@@ -25,13 +21,10 @@ const login = (form) => {
     fetch(request)
         .then(res => res.json())
         .then(res => {
-            user.email = res.session.email;
-            user.loggedIn = res.session.loggedIn;
-
             if (res.loggedIn) {
                 window.location.replace(tarefas_url);
             } else {
-                console.log("Email ou Senha incorretos!");
+                error.innerHTML = "<span>Email ou Senha Incorretos!</span>"
             }
         });
     
@@ -42,5 +35,3 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     login(form)
 });
-
-export default user;
