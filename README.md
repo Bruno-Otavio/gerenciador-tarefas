@@ -1,6 +1,12 @@
 # App Gerenciador de Tarefas
 Aplicativo para a gestão de tarefas.
 
+## Atividade de Back-end
+Basta entrar na pasta API
+
+## Atividade de Front-end
+Basta entrar na pasta Frontend
+
 ## Temas de aprendizado
 - Banco de dados (MySQL)
 - API (NodeJS)
